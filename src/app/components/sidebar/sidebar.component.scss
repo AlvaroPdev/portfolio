@@ -14,6 +14,7 @@
       .nav-link {
         @apply flex items-center justify-center lg:justify-start gap-4 p-3 rounded-lg hover:bg-white/20 transition-colors w-full;
 
+
         .link-text {
           @apply text-white whitespace-nowrap transition-all duration-300;
           opacity: 0;
