@@ -1,0 +1,40 @@
+.sidebar {
+  @apply fixed left-0 top-0 h-screen
+         w-16 transition-all duration-300 ease-in-out z-50
+         backdrop-blur-sm bg-white/10;
+
+  &.expanded {
+    @apply w-64;
+  }
+
+  .nav-links {
+    @apply flex flex-col gap-4 p-2 h-screen text-sm items-center justify-center;
+
+    li {
+      @apply w-full;
+
+      .nav-link {
+        @apply flex items-center justify-center lg:justify-start gap-4 p-3
+               rounded-lg hover:bg-white/20 transition-colors w-full;
+
+        .material-symbols-rounded {
+          @apply min-w-[24px] text-white text-2xl;
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0;
+        }
+
+        .link-text {
+          @apply text-white whitespace-nowrap transition-all duration-300;
+          opacity: 0;
+          transform: translateX(-1rem);
+          pointer-events: none;
+        }
+
+        .link-text.show-text {
+          opacity: 1;
+          transform: translateX(0);
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+}
