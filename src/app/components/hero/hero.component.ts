@@ -1,4 +1,4 @@
-// hero.component.ts
+// hero.component.ts - SOLUCIÓN SIMPLIFICADA
 import {
   Component,
   AfterViewInit,
@@ -8,10 +8,13 @@ import {
   HostListener,
 } from '@angular/core';
 
+// ✅ IMPORTACIÓN SIMPLE - Solo el módulo base
+import { LucideAngularModule } from 'lucide-angular';
+
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [LucideAngularModule], // ✅ Sin .pick(), sin iconos específicos
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
 })
@@ -49,11 +52,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
     const scrolled = window.pageYOffset;
     const parallaxElement = this.parallaxImage.nativeElement;
 
-    // Factor de velocidad MÁS INTENSO - valores más altos = más efecto
-    const speed = 0.8; // Cambiado de 0.3 a 0.8 para efecto más notorio
+    const speed = 0.8;
     const yPos = scrolled * speed;
 
-    // Solo la imagen se mueve, el contenido queda fijo
     parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
   }
 }

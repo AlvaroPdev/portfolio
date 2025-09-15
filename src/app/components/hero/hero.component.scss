@@ -25,6 +25,83 @@
 }
 
 .hero-subtitle {
-  @apply text-xl md:text-2xl lg:text-4xl font-light;
+  @apply text-lg md:text-xl lg:text-xl font-light;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Enlaces minimalistas - solo icono */
+.social-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.social-link:hover,
+.social-link:focus {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Iconos limpios */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  color: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* Colores específicos en hover */
+.social-link--linkedin:hover {
+  color: #0077b5;
+}
+
+.social-link--github:hover {
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Tema oscuro */
+@media (prefers-color-scheme: dark) {
+  .social-link--github:hover {
+    color: #f0f6fc;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .social-link {
+    transition: none;
+  }
+
+  .social-link:hover {
+    transform: none;
+  }
 }
