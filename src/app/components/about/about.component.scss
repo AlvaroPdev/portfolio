@@ -1,3 +1,43 @@
-:host {
-  display: block;
+.parent {
+  /* Mobile: 2 columnas, altura automática. Desktop: layout complejo de 7x8 */
+  @apply mt-10 mb-10 grid grid-cols-2 gap-4 lg:h-[700px] lg:grid-cols-7 lg:grid-rows-8 lg:gap-2;
+}
+
+.div1 {
+    /* Mobile: ocupa todo el ancho. Desktop: 3 columnas de ancho */
+    @apply bg-[#171717] col-span-2 rounded-2xl p-6 lg:col-span-3 lg:row-span-8 transition-all duration-300 ease-out will-change-transform;
+    p{
+        @apply text-gray-300 text-sm mb-3;
+    }
+    h2{
+        @apply text-white text-2xl font-bold mb-4;
+    }
+}
+
+.div2 {
+    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-4 transition-all duration-300 ease-out will-change-transform;
+    img {
+        @apply h-full w-full object-cover rounded-2xl;
+    }
+}
+
+.div3 {
+    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-6 transition-all duration-300 ease-out will-change-transform;
+    img {
+        @apply h-full w-full object-cover rounded-2xl;
+    }
+}
+
+.div5 {
+    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-4 lg:row-start-5 transition-all duration-300 ease-out will-change-transform;
+    img {
+        @apply h-full w-full object-cover rounded-2xl;
+    }
+}
+
+.div6 {
+    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-6 lg:row-start-5 transition-all duration-300 ease-out will-change-transform;
+    img {
+        @apply h-full w-full object-cover rounded-2xl;
+    }
 }
