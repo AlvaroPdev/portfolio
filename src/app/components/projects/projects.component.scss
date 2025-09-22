@@ -1,3 +1,58 @@
-:host {
-  display: block;
+.projects-section {
+  @apply mt-16 mr-1 ml-1;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.section-title {
+  @apply text-white text-3xl font-bold mb-8 text-center;
+}
+
+.projects-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+.column {
+  @apply grid gap-4;
+}
+
+.project-card {
+  .project-link {
+    @apply block overflow-hidden rounded-lg;
+
+    img {
+      @apply h-auto w-full rounded-lg transition-transform duration-300;
+      &:hover {
+        @apply scale-105;
+      }
+    }
+  }
+}
+
+.project-info {
+  @apply mt-3;
+}
+
+.project-title {
+  @apply text-xl font-bold;
+}
+
+.project-description {
+  @apply mt-1 text-sm text-gray-400;
+}
+
+.tags-container {
+  @apply mt-3 flex flex-wrap gap-2;
+}
+
+.tag {
+  @apply bg-gray-800 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full;
+}
+
+.no-projects {
+  @apply text-center text-gray-400;
 }
