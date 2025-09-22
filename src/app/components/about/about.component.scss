@@ -1,43 +1,39 @@
 .parent {
-  /* Mobile: 2 columnas, altura automática. Desktop: layout complejo de 7x8 */
-  @apply mt-10 mb-10 grid grid-cols-2 gap-4 lg:h-[700px] lg:grid-cols-7 lg:grid-rows-8 lg:gap-2;
+  @apply mt-10 grid grid-cols-1 gap-2 md:grid-cols-5 md:grid-rows-5 md:gap-2 h-auto md:h-[700px];
 }
 
-.div1 {
-    /* Mobile: ocupa todo el ancho. Desktop: 3 columnas de ancho */
-    @apply bg-[#171717] col-span-2 rounded-2xl p-6 lg:col-span-3 lg:row-span-8 transition-all duration-300 ease-out will-change-transform;
-    p{
-        @apply text-gray-300 text-sm mb-3;
-    }
-    h2{
-        @apply text-white text-2xl font-bold mb-4;
-    }
+.about {
+  @apply bg-[#171717] col-span-1 rounded-2xl p-6 flex flex-col justify-center md:col-span-3 md:row-span-5 transition-all duration-300 ease-out will-change-transform;
 }
 
-.div2 {
-    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-4 transition-all duration-300 ease-out will-change-transform;
-    img {
-        @apply h-full w-full object-cover rounded-2xl;
-    }
+.about h2 {
+  @apply text-white text-4xl font-bold mb-4 tracking-wide;
 }
 
-.div3 {
-    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-6 transition-all duration-300 ease-out will-change-transform;
-    img {
-        @apply h-full w-full object-cover rounded-2xl;
-    }
+.about p {
+  @apply text-gray-300 text-lg mb-4 leading-relaxed;
 }
 
-.div5 {
-    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-4 lg:row-start-5 transition-all duration-300 ease-out will-change-transform;
-    img {
-        @apply h-full w-full object-cover rounded-2xl;
-    }
+.about-actions {
+  @apply mt-8 flex justify-start;
 }
 
-.div6 {
-    @apply bg-[#171717] rounded-2xl lg:col-span-2 lg:row-span-4 lg:col-start-6 lg:row-start-5 transition-all duration-300 ease-out will-change-transform;
-    img {
-        @apply h-full w-full object-cover rounded-2xl;
-    }
+.about-btn {
+  @apply bg-white/10 text-white rounded-full px-8 py-3 text-lg font-medium shadow hover:bg-white/20 transition;
+}
+
+.profile {
+  @apply bg-[#171717] col-span-1 rounded-2xl flex items-center justify-center md:col-span-2 md:row-span-5 md:col-start-4 transition-all duration-300 ease-out will-change-transform;
+}
+
+.profile img {
+  @apply h-full w-full object-cover rounded-2xl;
+}
+
+.about-section {
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(.4,0,.2,1);
+}
+.about-section.visible {
+  opacity: 1;
 }
