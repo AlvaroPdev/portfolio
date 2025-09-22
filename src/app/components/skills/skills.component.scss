@@ -1,3 +1,85 @@
-:host {
-  display: block;
+.skills-section {
+  @apply mt-20 text-center;
+  @apply opacity-0;
+  @apply transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible {
+  @apply opacity-100;
+}
+
+.skills-title {
+  @apply text-white text-3xl font-bold mb-8 opacity-0 transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible .skills-title {
+  @apply opacity-100;
+}
+
+.skills-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center;
+}
+
+.skill-card {
+  @apply bg-[#171717] rounded-2xl p-6 flex flex-col items-center transition-transform duration-300 ease-in-out hover:scale-105;
+}
+
+.skill-icon {
+  @apply w-16 h-16 mb-4 cursor-pointer transition-transform duration-300 ease-in-out brightness-0 invert;
+}
+
+.skill-name {
+  @apply text-gray-300 text-lg font-medium;
+}
+
+.skills-cloud {
+  @apply flex flex-wrap gap-10 justify-center items-center py-8 opacity-0 transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible .skills-cloud {
+  @apply opacity-100;
+}
+
+.skill-float {
+  @apply relative transition-transform duration-300 ease-in-out z-[1];
+}
+
+.skill-float:hover {
+  @apply scale-125 z-[2];
+}
+
+.skill-label {
+  @apply absolute left-1/2 top-full bg-[#171717]/85 text-white px-4 py-2 rounded-xl text-base font-medium whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-300;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.skill-float:hover .skill-label {
+  @apply opacity-100;
+  transform: translateX(-50%) translateY(0);
+}
+
+.skills-description {
+  @apply text-gray-400 text-base max-w-xl mx-auto mb-8 text-center leading-relaxed opacity-0 transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible .skills-description {
+  @apply opacity-100;
+}
+
+.learning-section {
+  @apply mt-5 opacity-0 transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible .learning-section {
+  @apply opacity-100;
+  transition-delay: 0.3s;
+}
+
+.learning-title {
+  @apply text-white text-xl font-bold mb-4 opacity-0 transition-opacity duration-1000 ease-in-out;
+}
+
+.skills-section.visible .learning-title {
+  @apply opacity-100;
+  transition-delay: 0.4s;
 }

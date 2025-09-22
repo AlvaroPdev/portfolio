@@ -1,3 +1,39 @@
-<section id="skills" class="h-96">
-  <p class="text-center">skills en contruccion</p>
+<section class="skills-section" id="skills">
+  <h2 class="skills-title">Habilidades</h2>
+  <p class="skills-description">
+    Tecnologías y herramientas que utilizo para el desarrollo de aplicaciones
+    web modernas y escalables. Mi experiencia se centra en el ecosistema
+    frontend con enfoque en rendimiento y mantenibilidad del código.
+  </p>
+  <div class="skills-cloud">
+    @if (skills.length > 0) { @for (skill of skills; track skill.name) {
+    <div class="skill-float">
+      <img [src]="skill.icon" alt="{{ skill.name }} icon" class="skill-icon" />
+      <span class="skill-label">{{ skill.name }}</span>
+    </div>
+    } } @else {
+    <div class="text-gray-400">No hay habilidades registradas.</div>
+    }
+  </div>
+
+  <div class="learning-section">
+    <h3 class="learning-title">Ampliando Horizontes</h3>
+    <p class="skills-description">
+      Tecnologías emergentes y herramientas que estoy incorporando a mi stack de
+      desarrollo para mantenerme actualizado con las tendencias de la industria.
+    </p>
+    <div class="skills-cloud">
+      @if (learningSkills.length > 0) { @for (skill of learningSkills; track
+      skill.name) {
+      <div class="skill-float learning">
+        <img
+          [src]="skill.icon"
+          alt="{{ skill.name }} icon"
+          class="skill-icon"
+        />
+        <span class="skill-label">{{ skill.name }}</span>
+      </div>
+      } }
+    </div>
+  </div>
 </section>
