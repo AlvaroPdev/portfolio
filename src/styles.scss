@@ -20,10 +20,11 @@
 
 @layer base {
   html {
-    @apply font-inter text-white bg-[#212121];
+    @apply font-inter text-white bg-gradient-to-b from-[#434343] to-[#000000];
     scroll-behavior: smooth;
   }
 }
+
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
