@@ -5,7 +5,8 @@
   <ul class="nav-links">
     @for (item of navItems; track item.route) {
       <li>
-        <a [href]="item.route" class="nav-link">
+        <a href="{{item.route}}" class="nav-link"
+           (click)="scrollToSection(item.route.replace('#','')); $event.preventDefault()">
           <span class="material-symbols-rounded">{{item.icon}}</span>
           <span class="link-text" [class.show-text]="isExpanded">{{item.label}}</span>
         </a>

@@ -19,6 +19,14 @@ export class SidebarComponent {
     { route: '#about', icon: 'person', label: 'Sobre Mí' },
     { route: '#skills', icon: 'cognition_2', label: 'Habilidades' },
     { route: '#projects', icon: 'code', label: 'Proyectos' },
-    { route: '#contact', icon: 'mail', label: 'Contacto' }
+    { route: '#experience', icon: 'star', label: 'Experiencia' },
+    { route: '#contact', icon: 'mail', label: 'Contacto' },
   ];
+
+  scrollToSection(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 }
