@@ -1,11 +1,12 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { SidebarComponent } from '../sidebar/sidebar.component';
+import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
 import { SkillsComponent } from '../skills/skills.component';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { ExperienceComponent } from '../experience/experience.component';
 
 @Component({
   selector: 'app-layout',
@@ -16,6 +17,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
+    ExperienceComponent,
     SkillsComponent,
     NavbarComponent,
   ],
