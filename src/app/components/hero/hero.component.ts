@@ -22,16 +22,25 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('parallaxImage', { static: false })
   parallaxImage!: ElementRef<HTMLImageElement>;
 
-  backgroundImage: string = 'assets/images/background.png';
+  backgroundImage: string = 'assets/images/dump2.jpg';
   private animationId?: number;
+
+  typewriterText: string = '';
+  fullText: string = 'Desarrollador Frontend Junior';
+  typewriterIndex: number = 0;
+  typewriterInterval?: any;
 
   ngAfterViewInit(): void {
     this.updateParallax();
+    this.startTypewriter();
   }
 
   ngOnDestroy(): void {
     if (this.animationId) {
       cancelAnimationFrame(this.animationId);
+    }
+    if (this.typewriterInterval) {
+      clearInterval(this.typewriterInterval);
     }
   }
 
@@ -47,14 +56,29 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   }
 
   private updateParallax(): void {
-    if (!this.parallaxImage?.nativeElement) return;
+    if (this.parallaxImage?.nativeElement) {
+      const scrolled = window.scrollY;
+      const parallaxElement = this.parallaxImage.nativeElement;
+      const speed = 0.5; // Velocidad del parallax
 
-    const scrolled = window.pageYOffset;
-    const parallaxElement = this.parallaxImage.nativeElement;
+      // El efecto parallax básico: la imagen se mueve más lento que el scroll
+      const yPos = scrolled * speed;
 
-    const speed = 0.8;
-    const yPos = scrolled * speed;
+      // Aplica la transformación con una transición suave
+      parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    }
+  }
 
-    parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+  startTypewriter(): void {
+    this.typewriterText = '';
+    this.typewriterIndex = 0;
+    this.typewriterInterval = setInterval(() => {
+      if (this.typewriterIndex < this.fullText.length) {
+        this.typewriterText += this.fullText.charAt(this.typewriterIndex);
+        this.typewriterIndex++;
+      } else {
+        clearInterval(this.typewriterInterval);
+      }
+    }, 80);
   }
 }
