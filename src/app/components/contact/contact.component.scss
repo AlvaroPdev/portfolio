@@ -1,3 +1,37 @@
 :host {
   display: block;
 }
+
+.contact-section {
+  @apply py-16;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(.4,0,.2,1);
+}
+
+.contact-section.visible {
+  opacity: 1;
+}
+
+.contact-title {
+  @apply text-center text-2xl font-bold mb-10 text-white;
+}
+
+.contact-form {
+  @apply max-w-lg mx-auto bg-neutral-900 p-8 rounded-xl shadow;
+}
+
+.form-group {
+  @apply mb-6;
+}
+
+.form-label {
+  @apply block mb-2 text-sm font-medium text-gray-300;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 rounded-lg bg-neutral-800 text-gray-100 border border-gray-700 focus:outline-none focus:border-blue-500 transition;
+}
+
+.form-button {
+  @apply w-full py-2 px-4 rounded-lg bg-blue-500 text-white font-semibold shadow hover:bg-blue-600 transition;
+}

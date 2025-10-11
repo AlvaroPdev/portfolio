@@ -8,7 +8,7 @@ import { TiltDirective } from '../../directives/tilt.directive';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent implements AfterViewInit {
-  imgProfile = '../../../assets/images/profile2.JPG';
+  imgProfile = '../../../assets/images/profile.PNG';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
