@@ -1,59 +1,72 @@
 # Folio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Portafolio personal desarrollado en Angular 20, con Tailwind CSS y enfoque en componentes standalone. Incluye animaciones suaves, diseño responsive y secciones dinámicas para mostrar experiencia, habilidades, proyectos y contacto.
 
-## Development server
+## Características principales
 
-To start a local development server, run:
+- **Angular 20** con componentes standalone y tipado estricto.
+- **Tailwind CSS** para estilos utilitarios y diseño responsive.
+- **Animaciones** de aparición en secciones clave usando Intersection Observer.
+- **Secciones**: Hero, Sobre mí, Habilidades, Experiencia, Proyectos, Contacto.
+- **Formulario de contacto** funcional vía [Formspree](https://formspree.io/).
+- **Diseño moderno** y minimalista, optimizado para desktop y mobile.
+- **Gestión de assets** (imágenes, fuentes, íconos SVG).
+- **Buenas prácticas**: estructura modular, código limpio y mantenible.
 
-```bash
-ng serve
-```
+## Scripts disponibles
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+| Comando         | Descripción                                 |
+|-----------------|---------------------------------------------|
+| `npm start`     | Inicia el servidor de desarrollo (`ng serve`)|
+| `npm run build` | Compila el proyecto para producción         |
+| `npm test`      | Ejecuta los tests unitarios con Karma       |
 
-## Code scaffolding
+## Instalación y uso
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Instala dependencias:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate component component-name
-```
+2. Inicia el servidor de desarrollo:
+   ```bash
+   npm start
+   ```
+   Abre [http://localhost:4200](http://localhost:4200) en tu navegador.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. Para construir el proyecto:
+   ```bash
+   npm run build
+   ```
 
-```bash
-ng generate --help
-```
+## Estructura del proyecto
 
-## Building
+- `src/app/components/hero`: Sección de bienvenida con efecto parallax y typewriter.
+- `src/app/components/about`: Sobre mí, animación de aparición.
+- `src/app/components/skills`: Nube de habilidades y tecnologías aprendiendo.
+- `src/app/components/experience`: Línea de tiempo dinámica de experiencia laboral.
+- `src/app/components/projects`: Tarjetas de proyectos destacados.
+- `src/app/components/contact`: Formulario de contacto funcional.
 
-To build the project run:
+## Personalización
 
-```bash
-ng build
-```
+- **Formulario de contacto**: Edita el endpoint de Formspree en `contact.component.html` para recibir mensajes en tu correo.
+- **Animaciones**: Puedes ajustar la transición en los archivos `.scss` de cada sección.
+- **Agregar proyectos/experiencia**: Modifica los arrays en los componentes correspondientes.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Stack y dependencias
 
-## Running unit tests
+- Angular 20
+- Tailwind CSS 3
+- Lucide Angular Icons
+- Simple Parallax JS (para efectos visuales)
+- Formspree (envío de formularios)
+- RxJS, SCSS, TypeScript
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Despliegue
 
-```bash
-ng test
-```
+El build de producción se genera en la carpeta `dist/`. Puedes desplegarlo en cualquier hosting estático (Vercel, Netlify, GitHub Pages, etc).
 
-## Running end-to-end tests
+## Créditos
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado por [AlvaroPdev](https://github.com/AlvaroPdev).
