@@ -1,39 +1,12 @@
+/* Google Fonts - Roboto Condensed (múltiples pesos para usar con Tailwind) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/web/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* Aplicar Roboto Condensed globalmente a todo el proyecto */
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: -0.02em; /* Efecto compacto */
 }
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/assets/fonts/web/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-// @layer base {
-//   html {
-//     @apply font-inter text-white bg-gradient-to-b from-[#434343] to-[#000000];
-//     scroll-behavior: smooth;
-//   }
-// }
-
-
-// html::-webkit-scrollbar,
-// body::-webkit-scrollbar {
-//   display: none;
-// }
-
-
-// html,
-// body {
-//   -ms-overflow-style: none;
-//   scrollbar-width: none;
-// }
