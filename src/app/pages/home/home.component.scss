@@ -1,6 +1,0 @@
-$imagen-fondo: '/assets/images/background/background.png';
-
-.main-layout {
-  @apply min-h-screen flex flex-col bg-cover bg-center bg-no-repeat;
-  background-image: url(#{$imagen-fondo});
-}
