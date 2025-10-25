@@ -1,4 +1,4 @@
-<div class="intro-container" @fadeInUp>
+<div class="intro-container" [@fadeInOut]="animationState">
   <div class="text-container">
     <p class="text">
       @for (letter of nameLetters; track $index) {
@@ -7,5 +7,5 @@
     </p>
     <p class="subtext ">Desarrollador Frontend</p>
   </div>
-  <app-button iconRight="arrow_forward">Ir a inicio</app-button>
+  <app-button iconRight="arrow_forward" (click)="navigateToMain()">Ir a inicio</app-button>
 </div>

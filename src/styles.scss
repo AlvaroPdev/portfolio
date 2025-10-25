@@ -10,3 +10,18 @@
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: -0.02em; /* Efecto compacto */
 }
+
+/* Soporte para notch e islas dinámicas en móviles */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root, app-root {
+  height: 100%;
+  display: block;
+}

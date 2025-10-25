@@ -1,19 +1,48 @@
 
 .button-layout{
-  @apply px-4 py-2 rounded bg-transparent border border-neutral-300 text-neutral-800 hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-300 flex items-center justify-center gap-2;
+  @apply px-6 py-3 rounded-full bg-transparent border-2 border-white/30 backdrop-blur-sm flex items-center justify-center gap-2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
 
   &:hover {
-    .button-text,
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      transform: translateX(0);
+    }
+
     .button-icon {
-      @apply text-black;
+      transform: translateX(4px);
     }
   }
 
+  &:active {
+    transform: translateY(0);
+  }
+
   .button-text{
-    @apply flex-1 text-center text-lg text-white
+    @apply flex-1 text-center text-lg text-white font-medium;
+    position: relative;
+    z-index: 1;
   }
 
   .button-icon{
-    @apply text-lg text-white
+    @apply text-lg text-white;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
   }
 }

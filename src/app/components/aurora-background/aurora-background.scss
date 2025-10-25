@@ -1,15 +1,27 @@
 :host {
   display: block;
+  height: 100%;
 }
 
 .aurora-container {
-  @apply relative flex flex-col h-screen items-center justify-center transition-colors;
+  @apply relative flex flex-col items-center justify-center transition-colors;
   background-color: #0a0a0a;
   overflow: hidden;
+  /* Altura 100% del viewport + áreas seguras */
+  min-height: 100vh;
+  height: 100dvh; /* Dynamic viewport height - incluye notch */
+  width: 100%;
 }
 
 .aurora-background {
-  @apply absolute inset-0 overflow-hidden;
+  @apply absolute overflow-hidden;
+  /* Cubrir completamente incluyendo notch */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .aurora-effect {
