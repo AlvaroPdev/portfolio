@@ -1,0 +1,11 @@
+<button class="button-layout">
+	@if (iconLeft) {
+		<span class="material-symbols-outlined button-icon">{{ iconLeft }}</span>
+	}
+		<span class="button-text">
+			<ng-content></ng-content>
+		</span>
+	@if (iconRight) {
+		<span class="material-symbols-outlined button-icon">{{ iconRight }}</span>
+	}
+</button>

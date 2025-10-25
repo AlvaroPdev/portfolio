@@ -1,0 +1,11 @@
+<div class="intro-container" @fadeInUp>
+  <div class="text-container">
+    <p class="text">
+      @for (letter of nameLetters; track $index) {
+        <span class="letter">{{ letter }}</span>
+      }
+    </p>
+    <p class="subtext ">Desarrollador Frontend</p>
+  </div>
+  <app-button iconRight="arrow_forward">Ir a inicio</app-button>
+</div>

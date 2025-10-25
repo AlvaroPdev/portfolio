@@ -1,0 +1,35 @@
+.intro-container {
+  @apply flex flex-col items-center;
+
+  .text-container {
+    @apply mb-8;
+
+    .text {
+      @apply font-bold text-center text-white;
+      font-size: clamp(3rem, 15vw, 15rem);
+      line-height: 0.80;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .letter {
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        white-space: pre;
+
+        &:hover {
+          transform: translateY(-10px) scale(1.2);
+          text-shadow: 0 0 20px rgba(254, 254, 254, 0.5);
+        }
+      }
+    }
+
+    .subtext {
+      @apply text-white text-center font-medium;
+      font-size: clamp(1rem, 5vw, 1.25rem);
+    }
+  }
+}
