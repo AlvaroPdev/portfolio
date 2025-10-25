@@ -1,3 +1,7 @@
 <app-aurora-background>
-  <app-intro></app-intro>
+  @if (showIntro) {
+    <app-intro (introComplete)="onIntroComplete()"></app-intro>
+  } @else {
+    <app-main></app-main>
+  }
 </app-aurora-background>
