@@ -1,0 +1,19 @@
+
+.button-layout{
+  @apply px-4 py-2 rounded bg-transparent border border-neutral-300 text-neutral-800 hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-300 flex items-center justify-center gap-2;
+
+  &:hover {
+    .button-text,
+    .button-icon {
+      @apply text-black;
+    }
+  }
+
+  .button-text{
+    @apply flex-1 text-center text-lg text-white
+  }
+
+  .button-icon{
+    @apply text-lg text-white
+  }
+}
