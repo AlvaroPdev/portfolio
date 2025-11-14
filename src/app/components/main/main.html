@@ -1,3 +1,50 @@
-<div @fadeIn>
-  <p class="text">Welcome to the main content area!</p>
+<div class="main-container" @fadeIn>
+  <!-- Scroll Container -->
+  <div class="scroll-container" #scrollContainer (scroll)="onScroll()">
+    <div class="sections-wrapper">
+      <!-- Clone de la última sección (para loop hacia atrás) -->
+      <section class="section clone">
+        <app-contact-section></app-contact-section>
+      </section>
+
+      <!-- Secciones originales -->
+      <section class="section">
+        <app-hero-section></app-hero-section>
+      </section>
+
+      <section class="section">
+        <app-skills-section></app-skills-section>
+      </section>
+
+      <section class="section">
+        <app-projects-section></app-projects-section>
+      </section>
+
+      <section class="section">
+        <app-experience-section></app-experience-section>
+      </section>
+
+      <section class="section">
+        <app-contact-section></app-contact-section>
+      </section>
+
+      <!-- Clone de la primera sección (para loop hacia adelante) -->
+      <section class="section clone">
+        <app-hero-section></app-hero-section>
+      </section>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <app-navigation-buttons
+    (next)="nextSection()"
+    (prev)="prevSection()">
+  </app-navigation-buttons>
+
+  <!-- Page Indicator -->
+  <app-page-indicator
+    [currentSection]="currentSection"
+    [totalSections]="totalSections"
+    (goTo)="goToSection($event)">
+  </app-page-indicator>
 </div>

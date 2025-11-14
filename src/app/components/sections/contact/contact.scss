@@ -1,0 +1,228 @@
+.contact-section {
+  min-height: auto;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: var(--color-secondary, rgba(255, 255, 255, 0.8));
+  }
+}
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.status-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  .status-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .status-message {
+    color: var(--color-secondary, rgba(255, 255, 255, 0.8));
+    font-weight: 600;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+
+    &::before {
+      left: 100%;
+    }
+
+    .card-arrow {
+      transform: translateX(5px);
+    }
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    filter: grayscale(50%);
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .card-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-value {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .card-arrow {
+    color: var(--color-secondary, rgba(255, 255, 255, 0.8));
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  position: relative;
+
+  .cta-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .cta-text {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .cta-button {
+    padding: 1rem 3rem;
+    background: var(--color-secondary, rgba(255, 255, 255, 0.8));
+    color: #0a192f;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.hud-scanlines {
+  display: none;
+}
+
+.hud-corners {
+  display: none;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-panel {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+.skills-section {
+  min-height: auto;
+  padding: 0;
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+.projects-section {
+  min-height: auto;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
