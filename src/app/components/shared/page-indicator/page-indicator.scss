@@ -1,0 +1,53 @@
+.page-indicator {
+  @apply fixed top-8 left-8 z-[1000];
+  @apply flex gap-3 py-2 px-4;
+  @apply rounded-full;
+  @apply bg-white/5 border border-white/10;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  .dot {
+    @apply w-2 h-2;
+    @apply rounded-full;
+    @apply bg-white/30;
+    @apply cursor-pointer;
+    @apply transition-all duration-300;
+
+    &:hover {
+      @apply bg-white/50 scale-125;
+    }
+
+    &.active {
+      @apply bg-white w-6 rounded;
+    }
+  }
+}
+
+@screen md {
+  .page-indicator {
+    @apply top-6 left-4 gap-2.5 py-1.5 px-3;
+
+    .dot {
+      @apply w-1.5 h-1.5;
+
+      &.active {
+        @apply w-[18px];
+      }
+    }
+  }
+}
+
+@screen sm {
+  .page-indicator {
+    @apply top-4 left-2 gap-2 py-1 px-2.5;
+
+    .dot {
+      @apply w-[5px] h-[5px];
+
+      &.active {
+        @apply w-[15px];
+      }
+    }
+  }
+}

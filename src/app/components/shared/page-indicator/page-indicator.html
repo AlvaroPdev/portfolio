@@ -1,0 +1,8 @@
+<div class="page-indicator">
+  <span
+    *ngFor="let section of sections; let i = index"
+    class="dot"
+    [class.active]="currentSection === i + 1"
+    (click)="onGoToSection(i + 1)">
+  </span>
+</div>

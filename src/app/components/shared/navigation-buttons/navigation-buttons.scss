@@ -1,0 +1,65 @@
+.nav-btn {
+  @apply fixed bottom-8 z-[1000];
+  @apply flex items-center justify-center;
+  @apply w-[50px] h-[50px];
+  @apply rounded-full;
+  @apply bg-white/10 border border-white/20;
+  @apply text-white;
+  @apply cursor-pointer;
+  @apply transition-all duration-300;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  .material-symbols-outlined {
+    @apply text-2xl text-white;
+  }
+
+  &:hover {
+    @apply bg-white/20 border-white/40 scale-110;
+  }
+
+  &.nav-btn-prev {
+    @apply left-8;
+  }
+
+  &.nav-btn-next {
+    @apply right-8;
+  }
+}
+
+@screen md {
+  .nav-btn {
+    @apply w-10 h-10 bottom-6;
+
+    .material-symbols-outlined {
+      @apply text-xl;
+    }
+
+    &.nav-btn-prev {
+      @apply left-4;
+    }
+
+    &.nav-btn-next {
+      @apply right-4;
+    }
+  }
+}
+
+@screen sm {
+  .nav-btn {
+    @apply w-9 h-9 bottom-4;
+
+    .material-symbols-outlined {
+      @apply text-lg;
+    }
+
+    &.nav-btn-prev {
+      @apply left-2;
+    }
+
+    &.nav-btn-next {
+      @apply right-2;
+    }
+  }
+}
