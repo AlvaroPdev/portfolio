@@ -1,3 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+html,
+body {
+    @apply m-0 p-0 min-h-screen;
+    background-color: #101010;
+    font-family: 'Switzer', sans-serif;
+}
