@@ -2,9 +2,14 @@
 
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
 html,
 body {
     @apply m-0 p-0 min-h-screen;
     background-color: #101010;
-    font-family: 'Switzer', sans-serif;
+    overscroll-behavior: none;
 }
