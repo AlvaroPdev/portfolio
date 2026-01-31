@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+.projects-container {
+    @apply flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24;
+}
+
+.projects-title {
+    @apply text-6xl text-zinc-50 text-center mb-12 md:mb-16;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.projects-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl w-full;
+}

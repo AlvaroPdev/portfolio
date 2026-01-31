@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ProjectCard } from '../../shared/project-card/project-card';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ProjectCard],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
