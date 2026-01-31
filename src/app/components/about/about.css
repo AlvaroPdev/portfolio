@@ -1,0 +1,31 @@
+@reference "tailwindcss";
+
+.about-container {
+    @apply flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24;
+}
+
+.about-title {
+    @apply text-6xl text-zinc-50 text-center mb-12 md:mb-16;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.about-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl w-full;
+}
+
+.about-section {
+    @apply text-zinc-50;
+}
+
+.about-section h3 {
+    @apply text-xs md:text-sm font-bold mb-3 md:mb-4 tracking-wider;
+}
+
+.about-section p {
+    @apply text-sm mb-2 text-zinc-300;
+}
+
+.about-section p strong {
+    @apply text-zinc-50 font-semibold;
+}

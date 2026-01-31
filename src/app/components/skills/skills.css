@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.skills-container {
+    @apply flex flex-col items-center justify-center px-8 py-24;
+}
+
+.skills-title {
+    @apply text-6xl text-zinc-50 text-center mb-16;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.skills-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl w-full;
+}
+
+.skill-category {
+    @apply text-zinc-50;
+}
+
+.skill-category h3 {
+    @apply text-sm font-bold mb-4 tracking-wider;
+}
+
+.skill-category p {
+    @apply text-sm mb-2 text-zinc-300;
+}

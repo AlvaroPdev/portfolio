@@ -1,0 +1,19 @@
+@reference "tailwindcss";
+
+.hero-container {
+    @apply flex items-end justify-start p-4 md:p-8;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.name-title-wrapper {
+    @apply flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-8;
+}
+
+.name-section h1 {
+    @apply text-6xl md:text-8xl lg:text-9xl leading-none m-0 text-zinc-50;
+}
+
+.hero-content p {
+    @apply text-base md:text-xl mb-4 text-zinc-50;
+}
