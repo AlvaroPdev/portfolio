@@ -15,6 +15,12 @@
     @apply text-2xl text-zinc-50 hover:text-zinc-300 transition-colors cursor-pointer;
 }
 
+.nav-logo:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .nav-links {
     @apply flex gap-6 md:gap-8;
 }
@@ -22,6 +28,13 @@
 .nav-link {
     @apply text-sm md:text-base text-zinc-300 hover:text-zinc-50 transition-colors;
     cursor: pointer;
+}
+
+.nav-link:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 4px;
+    border-radius: 4px;
+    color: #fafafa;
 }
 
 .social-icons {
@@ -32,6 +45,14 @@
     @apply text-zinc-400 hover:text-zinc-50 transition-colors duration-200;
     cursor: pointer;
 }
+
+.social-link:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 4px;
+    border-radius: 4px;
+    color: #fafafa;
+}
+
 
 /* Mobile/Desktop visibility */
 .desktop-only {
@@ -58,6 +79,12 @@
 .hamburger {
     @apply flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer;
     padding: 0;
+}
+
+.hamburger:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .hamburger svg {
@@ -87,6 +114,13 @@
     padding: 1rem 1.5rem;
     cursor: pointer;
     border-bottom: 1px solid rgba(63, 63, 70, 0.2);
+}
+
+.mobile-menu-link:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: -2px;
+    background-color: rgba(63, 63, 70, 0.3);
+    color: #fafafa;
 }
 
 .mobile-menu-link:last-child {
