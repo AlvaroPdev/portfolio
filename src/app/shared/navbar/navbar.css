@@ -32,3 +32,63 @@
     @apply text-zinc-400 hover:text-zinc-50 transition-colors duration-200;
     cursor: pointer;
 }
+
+/* Mobile/Desktop visibility */
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-only {
+        display: flex;
+    }
+}
+
+.mobile-only {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Hamburger Button */
+.hamburger {
+    @apply flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer;
+    padding: 0;
+}
+
+.hamburger svg {
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active svg {
+    transform: rotate(90deg);
+}
+
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+    @apply md:hidden flex flex-col gap-0 overflow-hidden transition-all duration-300;
+    max-height: 0;
+    background-color: rgba(16, 16, 16, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.mobile-menu.open {
+    max-height: 300px;
+    border-bottom: 1px solid rgba(63, 63, 70, 0.3);
+}
+
+.mobile-menu-link {
+    @apply text-base text-zinc-300 hover:text-zinc-50 hover:bg-zinc-800/50 transition-colors;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(63, 63, 70, 0.2);
+}
+
+.mobile-menu-link:last-child {
+    border-bottom: none;
+}
