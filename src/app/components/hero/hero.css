@@ -1,9 +1,7 @@
 @reference "tailwindcss";
 
 .hero-container {
-    @apply flex items-end justify-start p-4 md:p-8;
-    min-height: 100vh;
-    height: 100vh;
+    @apply flex items-end justify-start p-4 md:p-8 relative min-h-screen h-screen;
 }
 
 .name-title-wrapper {
