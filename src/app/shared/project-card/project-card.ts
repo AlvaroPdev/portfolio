@@ -11,4 +11,6 @@ export class ProjectCard {
   description = input.required<string>();
   githubUrl = input.required<string>();
   techTags = input.required<string[]>();
+  liveUrl = input<string>('');
+  previewTitle = input<string>('');
 }
