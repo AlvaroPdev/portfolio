@@ -1,0 +1,31 @@
+<!-- Desktop button (bottom-right of hero, positioned by parent) -->
+<button class="cv-btn" (click)="openModal()">
+    <span class="material-icons cv-icon">file_download</span>
+    Descargar CV
+</button>
+
+<!-- Mobile floating button -->
+<button class="cv-btn-mobile" [class.compact]="scrolled" (click)="openModal()">
+    <span class="material-icons cv-icon">file_download</span>
+    <span class="cv-btn-label">Descargar CV</span>
+</button>
+
+<!-- Language selection modal -->
+@if (modalOpen) {
+<div class="modal-overlay" [class.closing]="closing" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+        <button class="modal-close" (click)="closeModal()">
+            <span class="material-icons">close</span>
+        </button>
+        <p class="modal-title">Selecciona el idioma</p>
+        <div class="modal-options">
+            <a href="/cv-es.pdf" download="Alvaro_Paredes_CV_ES.pdf" class="modal-btn" (click)="closeModal()">
+                Español
+            </a>
+            <a href="/cv-en.pdf" download="Alvaro_Paredes_CV_EN.pdf" class="modal-btn" (click)="closeModal()">
+                English
+            </a>
+        </div>
+    </div>
+</div>
+}

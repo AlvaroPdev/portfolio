@@ -1,0 +1,131 @@
+@reference "tailwindcss";
+
+/* Desktop button (positioned by parent as absolute) */
+.cv-btn {
+    @apply hidden md:flex items-center gap-2 px-4 py-2 text-sm text-zinc-400 border border-zinc-700 rounded-lg transition-all duration-300 cursor-pointer absolute bottom-6 right-6 md:bottom-8 md:right-8;
+    background: transparent;
+}
+
+.cv-btn:hover {
+    @apply text-zinc-50 border-zinc-500;
+}
+
+.cv-icon {
+    font-size: 16px;
+}
+
+/* Mobile floating button */
+.cv-btn-mobile {
+    @apply fixed top-20 right-4 z-40 flex items-center gap-2 px-3 py-2 text-sm text-zinc-400 border border-zinc-700 rounded-lg transition-all duration-300 cursor-pointer md:hidden;
+    background-color: rgba(24, 24, 27, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.cv-btn-mobile:hover {
+    @apply text-zinc-50 border-zinc-500;
+}
+
+.cv-btn-label {
+    @apply transition-all duration-300 overflow-hidden whitespace-nowrap;
+    max-width: 120px;
+    opacity: 1;
+}
+
+.cv-btn-mobile.compact .cv-btn-label {
+    max-width: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.cv-btn-mobile.compact {
+    gap: 0;
+}
+
+/* Modal */
+.modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    animation: overlayIn 0.2s ease forwards;
+}
+
+.modal-overlay.closing {
+    animation: overlayOut 0.2s ease forwards;
+}
+
+.modal {
+    @apply relative p-8 rounded-xl border border-zinc-700 w-full max-w-xs;
+    background-color: rgba(24, 24, 27, 0.95);
+    animation: modalIn 0.2s ease forwards;
+}
+
+.modal-overlay.closing .modal {
+    animation: modalOut 0.2s ease forwards;
+}
+
+.modal-close {
+    @apply absolute top-4 right-4 text-zinc-500 hover:text-zinc-200 transition-colors duration-200 cursor-pointer text-sm;
+    background: transparent;
+    border: none;
+}
+
+.modal-title {
+    @apply text-sm text-zinc-400 mb-6 text-center tracking-wider uppercase;
+}
+
+.modal-options {
+    @apply flex flex-col gap-3;
+}
+
+.modal-btn {
+    @apply flex items-center justify-center gap-3 px-4 py-3 text-sm text-zinc-300 border border-zinc-700 rounded-lg transition-all duration-200 no-underline;
+}
+
+.modal-btn:hover {
+    @apply border-zinc-500 text-zinc-50 bg-zinc-800;
+}
+
+/* Keyframe animations */
+@keyframes overlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlayOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modalOut {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(-8px);
+    }
+}
