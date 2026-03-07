@@ -1,10 +1,10 @@
 <div id="projects" class="projects-container">
     <h2 class="projects-title">Projects</h2>
-
     <div class="projects-grid">
-        <app-project-card title="Santiago Blues"
-            description="Plataforma web para gestión y promoción de servicios de marketing, desarrollada con Angular y Node.js. Incluye frontend moderno y backend API, para mostrar habilidades en desarrollo fullstack."
-            githubUrl="https://github.com/AlvaroPdev/SantiagoBlues"
-            [techTags]="['TypeScript', 'CSS', 'JavaScript', 'HTML']" />
+        @for (project of projects; track project.title) {
+        <app-project-card [title]="project.title" [description]="project.description" [githubUrl]="project.githubUrl"
+            [liveUrl]="project.liveUrl ?? ''" [previewTitle]="project.previewTitle ?? ''"
+            [techTags]="project.techTags" />
+        }
     </div>
 </div>
