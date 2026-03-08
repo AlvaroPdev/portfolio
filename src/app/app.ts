@@ -6,10 +6,11 @@ import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
+import { CvDownloadButton } from './shared/cv-download-button/cv-download-button';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Skills, Projects, Contact, Footer],
+  imports: [Navbar, Hero, About, Skills, Projects, Contact, Footer, CvDownloadButton],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
