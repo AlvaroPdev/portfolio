@@ -1,27 +1,31 @@
 @reference "tailwindcss";
 
-/* Desktop button */
-.cv-btn {
-    @apply hidden md:flex items-center gap-2 px-4 py-2 text-sm border border-zinc-200 rounded-lg transition-all duration-300 cursor-pointer fixed bottom-8 right-8 z-40 bg-zinc-100 text-[#101010];
+/* ── Shared button base (desktop + mobile) ── */
+.cv-btn,
+.cv-btn-mobile {
+    @apply flex items-center gap-2 px-4 py-2 text-sm border border-zinc-200 rounded-lg transition-all duration-300 cursor-pointer z-40 bg-zinc-100 text-[#101010];
 }
 
-.cv-btn:hover {
-    @apply bg-white border-white text-[#101010];
+.cv-btn:hover,
+.cv-btn-mobile:hover {
+    @apply bg-white border-white;
+}
+
+/* ── Desktop specifics ── */
+.cv-btn {
+    @apply hidden md:flex fixed bottom-8 right-8;
+}
+
+/* ── Mobile specifics ── */
+.cv-btn-mobile {
+    @apply fixed top-20 right-4 md:hidden px-3;
 }
 
 .cv-icon {
     @apply text-[16px];
 }
 
-/* Mobile floating button */
-.cv-btn-mobile {
-    @apply fixed top-20 right-4 z-40 flex items-center gap-2 px-3 py-2 text-sm border border-zinc-200 rounded-lg transition-all duration-300 cursor-pointer md:hidden bg-zinc-100 text-[#101010];
-}
-
-.cv-btn-mobile:hover {
-    @apply bg-white border-white text-[#101010];
-}
-
+/* ── Mobile compact (on scroll) ── */
 .cv-btn-label {
     @apply transition-all duration-300 overflow-hidden whitespace-nowrap max-w-[120px] opacity-100;
 }
@@ -34,7 +38,7 @@
     @apply gap-0;
 }
 
-/* Modal */
+/* ── Modal overlay ── */
 .modal-overlay {
     @apply fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm;
     animation: overlayIn 0.2s ease forwards;
@@ -45,6 +49,7 @@
     animation: overlayOut 0.2s ease forwards;
 }
 
+/* ── Modal ── */
 .modal {
     @apply relative p-8 rounded-xl border border-zinc-800 w-full max-w-xs bg-[#101010];
     animation: modalIn 0.2s ease forwards;
@@ -66,55 +71,11 @@
     @apply flex flex-col gap-3;
 }
 
+/* ── Modal download buttons (same style as main cv-btn) ── */
 .modal-btn {
     @apply flex items-center justify-center gap-3 px-4 py-3 text-sm border border-zinc-800 rounded-lg transition-all duration-200 no-underline bg-zinc-100 text-[#101010];
 }
 
 .modal-btn:hover {
-    @apply bg-white border-white text-[#101010];
-}
-
-/* Keyframe animations — deben ser raw CSS (no hay @apply para valores como scale/translateY) */
-@keyframes overlayIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes overlayOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes modalIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95) translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-@keyframes modalOut {
-    from {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: scale(0.95) translateY(-8px);
-    }
+    @apply bg-white border-white;
 }
