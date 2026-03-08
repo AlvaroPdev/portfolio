@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectCard } from '../../shared/project-card/project-card';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal/scroll-reveal.directive';
 
 interface Project {
   title: string;
@@ -12,7 +13,7 @@ interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [ProjectCard],
+  imports: [ProjectCard, ScrollRevealDirective],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
