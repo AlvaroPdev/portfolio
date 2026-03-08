@@ -19,6 +19,7 @@ export class CvDownloadButton {
     openModal() {
         this.closing = false;
         this.modalOpen = true;
+        document.body.style.overflow = 'hidden';
     }
 
     closeModal() {
@@ -26,6 +27,7 @@ export class CvDownloadButton {
         setTimeout(() => {
             this.modalOpen = false;
             this.closing = false;
+            document.body.style.overflow = '';
         }, 200);
     }
 
