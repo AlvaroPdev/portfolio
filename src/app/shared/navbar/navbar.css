@@ -100,8 +100,7 @@
 .mobile-menu {
     @apply md:hidden flex flex-col gap-0 overflow-hidden transition-all duration-300;
     max-height: 0;
-    background-color: rgba(16, 16, 16, 0.95);
-    backdrop-filter: blur(10px);
+    background: transparent;
 }
 
 .mobile-menu.open {
