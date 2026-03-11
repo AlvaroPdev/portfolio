@@ -1,15 +1,15 @@
 @reference "tailwindcss";
 
 .skills-container {
-    @apply flex flex-col items-center justify-center px-8 py-24;
+    @apply flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24;
 }
 
 .skills-title {
-    @apply text-6xl text-zinc-50 text-center mb-16 font-light tracking-[0.05em];
+    @apply text-6xl text-zinc-50 text-center mb-12 md:mb-16 font-light tracking-[0.05em];
 }
 
 .skills-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl w-full;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl w-full;
 }
 
 .skill-category {
@@ -17,7 +17,7 @@
 }
 
 .skill-category h3 {
-    @apply text-sm font-bold mb-4 tracking-wider;
+    @apply text-xs md:text-sm font-bold mb-3 md:mb-4 tracking-wider;
 }
 
 .skill-category p {
