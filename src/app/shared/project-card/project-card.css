@@ -1,7 +1,11 @@
 @reference "tailwindcss";
 
+:host {
+    @apply flex;
+}
+
 .project-card {
-    @apply border border-zinc-700 transition-all duration-300 rounded-xl overflow-hidden bg-zinc-900/60;
+    @apply border border-zinc-700 transition-all duration-300 rounded-xl overflow-hidden bg-zinc-900/60 flex flex-col;
     backdrop-filter: blur(8px);
 }
 
@@ -22,7 +26,7 @@
 
 /* Card body */
 .card-body {
-    @apply p-6;
+    @apply p-6 flex flex-col flex-1;
 }
 
 .project-header {
@@ -42,7 +46,7 @@
 }
 
 .project-description {
-    @apply text-sm text-zinc-400 mb-5 leading-relaxed;
+    @apply text-sm text-zinc-400 mb-5 leading-relaxed flex-1;
 }
 
 .tech-stack {

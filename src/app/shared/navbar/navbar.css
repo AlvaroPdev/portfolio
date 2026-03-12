@@ -8,11 +8,16 @@
 }
 
 .nav-content {
-    @apply max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center;
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-4 grid items-center;
+    grid-template-columns: 1fr auto 1fr;
 }
 
 .nav-logo {
-    @apply text-2xl text-zinc-50 hover:text-zinc-300 transition-colors cursor-pointer;
+    @apply flex items-center cursor-pointer w-fit;
+}
+
+.nav-logo img {
+    @apply transition-opacity hover:opacity-80;
 }
 
 .nav-logo:focus {
@@ -38,7 +43,7 @@
 }
 
 .social-icons {
-    @apply flex gap-4 items-center;
+    @apply flex gap-4 items-center justify-end;
 }
 
 .social-link {

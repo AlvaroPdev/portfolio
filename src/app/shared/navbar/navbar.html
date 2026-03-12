@@ -2,12 +2,14 @@
 @if (!isMobile) {
 <nav class="navbar" aria-label="Navegación principal">
     <div class="nav-content">
-        <a href="#hero" (click)="scrollToSection('hero')" class="nav-logo">AP</a>
+        <a href="#hero" (click)="scrollToSection('hero')" class="nav-logo" aria-label="Inicio">
+            <img src="/android-chrome-192x192.png" alt="Logo" width="28" height="28">
+        </a>
 
         <div class="nav-links">
-            <a (click)="scrollToSection('about')" class="nav-link">About</a>
-            <a (click)="scrollToSection('skills')" class="nav-link">Skills</a>
-            <a (click)="scrollToSection('projects')" class="nav-link">Projects</a>
+            <a (click)="scrollToSection('about')" class="nav-link">Sobre mí</a>
+            <a (click)="scrollToSection('skills')" class="nav-link">Habilidades</a>
+            <a (click)="scrollToSection('projects')" class="nav-link">Proyectos</a>
         </div>
 
         <div class="social-icons">
@@ -40,7 +42,9 @@
 @if (isMobile) {
 <nav class="navbar" aria-label="Navegación principal">
     <div class="nav-content">
-        <a href="#hero" (click)="scrollToSection('hero')" class="nav-logo">AP</a>
+        <a href="#hero" (click)="scrollToSection('hero')" class="nav-logo" aria-label="Inicio">
+            <img src="/android-chrome-192x192.png" alt="Logo" width="28" height="28">
+        </a>
 
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/alvaropdev/" target="_blank" rel="noopener noreferrer"
@@ -79,9 +83,9 @@
 
     <!-- Mobile Menu Dropdown -->
     <div class="mobile-menu" [class.open]="isMenuOpen">
-        <a (click)="scrollToSection('about')" class="mobile-menu-link">About</a>
-        <a (click)="scrollToSection('skills')" class="mobile-menu-link">Skills</a>
-        <a (click)="scrollToSection('projects')" class="mobile-menu-link">Projects</a>
+        <a (click)="scrollToSection('about')" class="mobile-menu-link">Sobre mí</a>
+        <a (click)="scrollToSection('skills')" class="mobile-menu-link">Habilidades</a>
+        <a (click)="scrollToSection('projects')" class="mobile-menu-link">Proyectos</a>
     </div>
 </nav>
 }
