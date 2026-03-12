@@ -30,6 +30,16 @@ body {
     /* Firefox */
 }
 
+/* Skip navigation link */
+.skip-nav {
+    @apply absolute -top-10 left-1/2 -translate-x-1/2 bg-zinc-50 text-zinc-900 px-4 py-2 rounded-b-md text-sm font-medium z-[9999];
+    transition: top 0.2s ease;
+}
+
+.skip-nav:focus {
+    @apply top-0;
+}
+
 /* Scroll reveal animations */
 .scroll-reveal {
     opacity: 0;
@@ -84,5 +94,18 @@ body {
     to {
         opacity: 0;
         transform: scale(0.95) translateY(-8px);
+    }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

@@ -1,5 +1,5 @@
-<section id="projects" class="projects-container" appScrollReveal>
-    <h2 class="projects-title">Projects</h2>
+<section id="projects" class="projects-container" aria-labelledby="projects-heading" appScrollReveal>
+    <h2 id="projects-heading" class="projects-title">Projects</h2>
     <div class="projects-grid">
         @for (project of projects; track project.title) {
         <app-project-card [title]="project.title" [description]="project.description" [githubUrl]="project.githubUrl"
