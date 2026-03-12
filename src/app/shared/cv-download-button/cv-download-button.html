@@ -1,13 +1,13 @@
 <!-- Desktop button (bottom-right of hero, positioned by parent) -->
 <button class="cv-btn" (click)="openModal()" aria-label="Descargar mi Curriculum Vitae">
-    <span class="material-icons cv-icon" aria-hidden="true">file_download</span>
+    <svg class="cv-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
     Descargar CV
 </button>
 
 <!-- Mobile floating button -->
 <button class="cv-btn-mobile" [class.compact]="scrolled" (click)="openModal()"
     aria-label="Descargar mi Curriculum Vitae">
-    <span class="material-icons cv-icon" aria-hidden="true">file_download</span>
+    <svg class="cv-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
     <span class="cv-btn-label">Descargar CV</span>
 </button>
 
@@ -16,7 +16,7 @@
 <div class="modal-overlay" [class.closing]="closing" (click)="closeModal()">
     <div class="modal" (click)="$event.stopPropagation()">
         <button class="modal-close" (click)="closeModal()" aria-label="Cerrar modal">
-            <span class="material-icons" aria-hidden="true">close</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
         <p class="modal-title">Selecciona el idioma</p>
         <div class="modal-options">
