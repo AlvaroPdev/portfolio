@@ -27,3 +27,18 @@
 .about-section p strong {
     @apply text-zinc-50 font-semibold;
 }
+
+/* Contact links — animated underline L→R */
+.about-section a {
+    @apply text-zinc-300 no-underline relative inline-block;
+}
+
+.about-section a::after {
+    content: '';
+    @apply absolute -bottom-px left-0 w-0 h-px bg-current;
+    transition: width 0.3s ease;
+}
+
+.about-section a:hover::after {
+    @apply w-full;
+}
