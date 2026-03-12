@@ -1,12 +1,13 @@
 <!-- Desktop button (bottom-right of hero, positioned by parent) -->
-<button class="cv-btn" (click)="openModal()">
-    <span class="material-icons cv-icon">file_download</span>
+<button class="cv-btn" (click)="openModal()" aria-label="Descargar mi Curriculum Vitae">
+    <span class="material-icons cv-icon" aria-hidden="true">file_download</span>
     Descargar CV
 </button>
 
 <!-- Mobile floating button -->
-<button class="cv-btn-mobile" [class.compact]="scrolled" (click)="openModal()">
-    <span class="material-icons cv-icon">file_download</span>
+<button class="cv-btn-mobile" [class.compact]="scrolled" (click)="openModal()"
+    aria-label="Descargar mi Curriculum Vitae">
+    <span class="material-icons cv-icon" aria-hidden="true">file_download</span>
     <span class="cv-btn-label">Descargar CV</span>
 </button>
 
@@ -14,8 +15,8 @@
 @if (modalOpen) {
 <div class="modal-overlay" [class.closing]="closing" (click)="closeModal()">
     <div class="modal" (click)="$event.stopPropagation()">
-        <button class="modal-close" (click)="closeModal()">
-            <span class="material-icons">close</span>
+        <button class="modal-close" (click)="closeModal()" aria-label="Cerrar modal">
+            <span class="material-icons" aria-hidden="true">close</span>
         </button>
         <p class="modal-title">Selecciona el idioma</p>
         <div class="modal-options">

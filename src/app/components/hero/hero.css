@@ -8,7 +8,7 @@
     @apply flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-8;
 }
 
-.name-section h1 {
+h1.name-section {
     @apply text-6xl md:text-8xl lg:text-9xl leading-none m-0 text-zinc-50;
 }
 
