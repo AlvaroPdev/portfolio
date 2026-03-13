@@ -82,8 +82,7 @@
 
 /* Hamburger Button */
 .hamburger {
-    @apply flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer;
-    padding: 0;
+    @apply flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer justify-self-end;
 }
 
 .hamburger:focus {
