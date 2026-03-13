@@ -20,6 +20,14 @@
     @apply text-xs md:text-sm font-bold mb-3 md:mb-4 tracking-wider;
 }
 
+.about-section ul {
+    @apply list-none p-0 m-0;
+}
+
+.about-section li {
+    @apply text-sm mb-2 text-zinc-300;
+}
+
 .about-section p {
     @apply text-sm mb-2 text-zinc-300;
 }

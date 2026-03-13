@@ -20,8 +20,12 @@
     @apply text-xs md:text-sm font-bold mb-3 md:mb-4 tracking-wider;
 }
 
-.skill-category p {
-    @apply text-sm mb-2 text-zinc-300;
+.skill-category ul {
+    @apply list-none p-0 m-0;
+}
+
+.skill-category li {
+    @apply text-sm mb-2 text-zinc-300 italic;
 }
 
 /* Certification links — animated underline L→R */
