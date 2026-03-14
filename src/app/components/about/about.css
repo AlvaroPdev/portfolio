@@ -5,11 +5,13 @@
 }
 
 .about-title {
-    @apply text-6xl text-zinc-50 text-center mb-4 font-light tracking-[0.05em];
+    @apply text-6xl text-center mb-4 font-light tracking-[0.05em];
+    color: var(--color-text-primary);
 }
 
 .about-tagline {
-    @apply text-sm text-zinc-400 text-center italic mb-12 md:mb-16;
+    @apply text-sm text-center italic mb-12 md:mb-16;
+    color: var(--color-text-tertiary);
 }
 
 .about-grid {
@@ -17,7 +19,7 @@
 }
 
 .about-section {
-    @apply text-zinc-50;
+    color: var(--color-text-primary);
 }
 
 .about-section h3 {
@@ -29,20 +31,24 @@
 }
 
 .about-section li {
-    @apply text-sm mb-2 text-zinc-300;
+    @apply text-sm mb-2;
+    color: var(--color-text-secondary);
 }
 
 .about-section p {
-    @apply text-sm mb-2 text-zinc-300;
+    @apply text-sm mb-2;
+    color: var(--color-text-secondary);
 }
 
 .about-section p strong {
-    @apply text-zinc-50 font-semibold;
+    @apply font-semibold;
+    color: var(--color-text-primary);
 }
 
 /* Contact links — animated underline L→R */
 .about-section a {
-    @apply text-zinc-300 no-underline relative inline-block;
+    @apply no-underline relative inline-block;
+    color: var(--color-text-secondary);
 }
 
 .about-section a::after {
