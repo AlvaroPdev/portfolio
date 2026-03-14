@@ -5,16 +5,20 @@
 }
 
 .project-card {
-    @apply border border-zinc-700 transition-all duration-300 rounded-xl overflow-hidden bg-zinc-900/60 flex flex-col;
+    @apply transition-all duration-300 rounded-xl overflow-hidden flex flex-col;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
     backdrop-filter: blur(8px);
 }
 
 .project-card:hover {
-    @apply border-zinc-500 -translate-y-1 bg-zinc-800/70;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    @apply -translate-y-1;
+    border-color: var(--color-border-hover);
+    background-color: var(--color-surface-hover);
+    box-shadow: 0 20px 40px var(--color-shadow);
 }
 
-/* Auto-generated preview */
+/* Auto-generated preview — stays white in both themes */
 .card-preview {
     @apply flex items-center justify-center h-40 bg-white relative overflow-hidden;
 }
@@ -34,7 +38,8 @@
 }
 
 .project-header h3 {
-    @apply text-lg font-semibold text-zinc-50 tracking-[0.01em];
+    @apply text-lg font-semibold tracking-[0.01em];
+    color: var(--color-text-primary);
 }
 
 .project-links {
@@ -42,11 +47,17 @@
 }
 
 .project-link {
-    @apply text-zinc-400 hover:text-zinc-50 transition-colors duration-200;
+    @apply transition-colors duration-200;
+    color: var(--color-text-tertiary);
+}
+
+.project-link:hover {
+    color: var(--color-text-primary);
 }
 
 .project-description {
-    @apply text-sm text-zinc-400 mb-5 leading-relaxed flex-1;
+    @apply text-sm mb-5 leading-relaxed flex-1;
+    color: var(--color-text-tertiary);
 }
 
 .tech-stack {
@@ -54,5 +65,8 @@
 }
 
 .tech-tag {
-    @apply text-xs px-3 py-1 rounded-full border border-zinc-700 text-zinc-400 bg-zinc-800/40;
+    @apply text-xs px-3 py-1 rounded-full;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-tertiary);
+    background-color: var(--color-tag-bg);
 }

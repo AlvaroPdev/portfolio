@@ -3,12 +3,16 @@
 /* ── Shared button base (desktop + mobile) ── */
 .cv-btn,
 .cv-btn-mobile {
-    @apply flex items-center gap-2 px-4 py-2 text-sm border border-zinc-200 rounded-lg transition-all duration-300 cursor-pointer z-40 bg-zinc-100 text-[#101010];
+    @apply flex items-center gap-2 px-4 py-2 text-sm rounded-lg transition-all duration-300 cursor-pointer z-40;
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    border: 1px solid var(--color-btn-border);
 }
 
 .cv-btn:hover,
 .cv-btn-mobile:hover {
-    @apply bg-white border-white;
+    background-color: var(--color-btn-hover-bg);
+    border-color: var(--color-btn-hover-border);
 }
 
 /* ── Desktop specifics (flows inside hero) ── */
@@ -51,7 +55,9 @@
 
 /* ── Modal ── */
 .modal {
-    @apply relative p-8 rounded-xl border border-zinc-800 w-full max-w-xs bg-[#101010];
+    @apply relative p-8 rounded-xl w-full max-w-xs;
+    background-color: var(--color-modal-bg);
+    border: 1px solid var(--color-modal-border);
     animation: modalIn 0.2s ease forwards;
 }
 
@@ -60,22 +66,32 @@
 }
 
 .modal-close {
-    @apply absolute top-4 right-4 text-zinc-400 hover:text-zinc-50 transition-colors duration-200 cursor-pointer text-sm bg-transparent border-none;
+    @apply absolute top-4 right-4 transition-colors duration-200 cursor-pointer text-sm bg-transparent border-none;
+    color: var(--color-text-tertiary);
+}
+
+.modal-close:hover {
+    color: var(--color-text-primary);
 }
 
 .modal-title {
-    @apply text-xs text-zinc-400 mb-6 text-center tracking-widest uppercase;
+    @apply text-xs mb-6 text-center tracking-widest uppercase;
+    color: var(--color-text-tertiary);
 }
 
 .modal-options {
     @apply flex flex-col gap-3;
 }
 
-/* ── Modal download buttons (same style as main cv-btn) ── */
+/* ── Modal download buttons ── */
 .modal-btn {
-    @apply flex items-center justify-center gap-3 px-4 py-3 text-sm border border-zinc-800 rounded-lg transition-all duration-200 no-underline bg-zinc-100 text-[#101010];
+    @apply flex items-center justify-center gap-3 px-4 py-3 text-sm rounded-lg transition-all duration-200 no-underline;
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    border: 1px solid var(--color-modal-border);
 }
 
 .modal-btn:hover {
-    @apply bg-white border-white;
+    background-color: var(--color-btn-hover-bg);
+    border-color: var(--color-btn-hover-border);
 }
