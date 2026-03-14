@@ -10,7 +10,7 @@ import { CvDownloadButton } from './shared/cv-download-button/cv-download-button
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Skills, Projects, Contact, Footer, CvDownloadButton],
+  imports: [Navbar, Hero, About, Skills, Projects, Footer, CvDownloadButton],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

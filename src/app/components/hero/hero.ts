@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal/scroll-reveal.directive';
+import { CvDownloadButton } from '../../shared/cv-download-button/cv-download-button';
 
 @Component({
   selector: 'app-hero',
-  imports: [ScrollRevealDirective],
+  imports: [ScrollRevealDirective, CvDownloadButton],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })

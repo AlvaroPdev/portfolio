@@ -11,14 +11,14 @@
     @apply bg-white border-white;
 }
 
-/* ── Desktop specifics ── */
+/* ── Desktop specifics (flows inside hero) ── */
 .cv-btn {
-    @apply hidden md:flex fixed bottom-8 right-8;
+    @apply flex;
 }
 
 /* ── Mobile specifics ── */
 .cv-btn-mobile {
-    @apply fixed top-20 right-4 md:hidden px-3;
+    @apply fixed top-20 right-4 px-3 md:hidden;
 }
 
 .cv-icon {

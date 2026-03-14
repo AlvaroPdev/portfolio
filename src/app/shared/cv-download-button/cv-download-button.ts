@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, input } from '@angular/core';
 
 @Component({
     selector: 'app-cv-download-button',
@@ -7,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
     styleUrl: './cv-download-button.css',
 })
 export class CvDownloadButton {
+    variant = input<'desktop' | 'mobile'>('desktop');
     modalOpen = false;
     closing = false;
     scrolled = false;

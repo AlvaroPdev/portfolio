@@ -1,15 +1,19 @@
-<!-- Desktop button (bottom-right of hero, positioned by parent) -->
+<!-- Desktop button (inside hero) -->
+@if (variant() === 'desktop') {
 <button type="button" class="cv-btn" (click)="openModal()" aria-label="Descargar mi Curriculum Vitae">
     <svg class="cv-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
     Descargar CV
 </button>
+}
 
 <!-- Mobile floating button -->
+@if (variant() === 'mobile') {
 <button type="button" class="cv-btn-mobile" [class.compact]="scrolled" (click)="openModal()"
     aria-label="Descargar mi Curriculum Vitae">
     <svg class="cv-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
     <span class="cv-btn-label">Descargar CV</span>
 </button>
+}
 
 <!-- Language selection modal -->
 @if (modalOpen) {
