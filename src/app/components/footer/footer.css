@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+.footer {
+    @apply py-8 px-4 md:px-8;
+    border-top: 1px solid rgba(63, 63, 70, 0.3);
+}
+
+.footer-content {
+    @apply max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4;
+}
+
+.footer-text {
+    @apply text-xs text-zinc-500 tracking-wider;
+}
+
+.footer-links {
+    @apply flex gap-6;
+}
+
+.footer-links a {
+    @apply text-xs text-zinc-500 hover:text-zinc-300 transition-colors no-underline tracking-wider;
+}
