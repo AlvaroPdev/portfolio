@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { ThemeService } from '../theme/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+  protected readonly themeService = inject(ThemeService);
   isMenuOpen = false;
   isMobile = false;
 
