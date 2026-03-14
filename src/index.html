@@ -7,7 +7,7 @@
   <base href="/">
   <link rel="canonical" href="https://alvaroparedes.vercel.app/" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="dark light">
   <meta name="google-site-verification" content="QUaXjzIzL62EI5YGId9kbUzO3xmQW-knJ6XaqcfA02A" />
   <meta name="description"
     content="Construyo interfaces modernas con Angular 19+ en IBM. Especializado en microfrontends, TypeScript y UI enterprise.">
@@ -127,6 +127,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="manifest" href="/manifest.json">
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.classList.add('light');
+        document.documentElement.style.colorScheme = 'light';
+      }
+    })();
+  </script>
 </head>
 
 <body>
