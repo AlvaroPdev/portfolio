@@ -25,7 +25,11 @@
 }
 
 .skill-category li {
-    @apply text-sm mb-2 text-zinc-300 italic;
+    @apply text-sm mb-2 text-zinc-300 italic flex items-center gap-2;
+}
+
+.skill-icon {
+    @apply w-3.5 h-3.5 text-zinc-500 shrink-0;
 }
 
 /* Certification links — animated underline L→R */
