@@ -1,6 +1,6 @@
 <!-- Desktop Navbar -->
 @if (!isMobile) {
-<nav class="navbar" aria-label="Navegación principal">
+<nav class="navbar" [style.transform]="'translateY(' + navbarTranslate + 'px)'" aria-label="Navegación principal">
     <div class="nav-content">
         <a href="#hero" (click)="scrollToSection('hero')" class="nav-logo" aria-label="Inicio">
             <img src="/favicon-32x32.png" alt="Alvaro Paredes — Inicio" width="28" height="28">

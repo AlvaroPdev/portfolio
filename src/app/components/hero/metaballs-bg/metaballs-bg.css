@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+:host {
+    @apply absolute inset-0 z-0 overflow-hidden pointer-events-none;
+}
+
+.metaballs-stage {
+    @apply w-full h-full;
+    filter: url(#topo-hollow);
+}
+
+canvas {
+    @apply block w-full h-full;
+}

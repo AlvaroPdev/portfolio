@@ -4,8 +4,12 @@
     @apply flex items-end justify-between p-4 md:p-8 relative min-h-screen h-screen;
 }
 
+.hero-content {
+    @apply relative z-10;
+}
+
 .hero-cv-btn {
-    @apply hidden md:flex items-end;
+    @apply hidden md:flex items-end relative z-10;
 }
 
 .name-title-wrapper {

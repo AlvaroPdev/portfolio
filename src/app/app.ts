@@ -16,4 +16,8 @@ import { CvDownloadButton } from './shared/cv-download-button/cv-download-button
 })
 export class App {
   protected readonly title = signal('portfolio');
+
+  constructor() {
+    history.scrollRestoration = 'manual';
+  }
 }

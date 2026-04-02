@@ -1,0 +1,16 @@
+<div class="metaballs-stage">
+    <canvas #canvas></canvas>
+</div>
+
+<svg style="position:absolute; width:0; height:0;" aria-hidden="true">
+    <defs>
+        <filter id="topo-hollow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="35" result="blur" />
+            <feComponentTransfer in="blur" result="rings">
+                <feFuncA type="discrete" tableValues="0 1 0 1 0 1 0 1 0 1 0 1 0 1 0" />
+            </feComponentTransfer>
+            <feFlood [attr.flood-color]="floodColor" [attr.flood-opacity]="floodOpacity" result="colorFill" />
+            <feComposite in="colorFill" in2="rings" operator="in" />
+        </filter>
+    </defs>
+</svg>
